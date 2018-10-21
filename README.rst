@@ -168,8 +168,12 @@ started.
 
   julia> # One-liner functions are also there:
 
-  julia> f(r) = pi * r ^ 2     # ^ for exponent
-  f (generic function with 1 method)
+  julia> fib(n) = n <= 1 ? n : fib(n-1) + fib(n-2)
+  fib (generic function with 1 method)
+
+  julia> @time fib(40)
+    0.593001 seconds (5 allocations: 176 bytes)
+  102334155
 
   juila> # short lambda:
 
