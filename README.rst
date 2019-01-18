@@ -12,6 +12,8 @@ order, after the introduction is:
 - processes (still being written)
 - regex (not yet started)
 
+However, each part should theoretically stand on its own to some extent.
+
 Introduction
 ------------
 If you know anything about Julia_, you probably know it's an interpreted
