@@ -144,7 +144,7 @@ programmers. For programmers with this background, becoming productive
 in Julia should only take a few hours, though there are rather major
 differences as one progresses in the language.
 
-For a quick introduction to the language, the `learing`_ page has some
+For a quick introduction to the language, the `learning`_ page has some
 good links. The `Intro to Julia`_ with Jane Herriman goes over
 everything you'll need to know to understand this tutorial. If you
 choose to follow this tutorial, you will be guided to log into
