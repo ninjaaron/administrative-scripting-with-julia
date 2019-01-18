@@ -1,6 +1,17 @@
 Administrative Scripting with Julia
 ===================================
 
+Note that this tutorial is still in process. Eventually the parts that
+are only in notebooks will be moved into this file with a script, but
+for the moment, you can look at the notebooks directly. The intended
+order, after the introduction is:
+
+- files
+- CLI
+- filesystem
+- processes (still being written)
+- regex (not yet started)
+
 Introduction
 ------------
 If you know anything about Julia_, you probably know it's an interpreted
