@@ -17,10 +17,10 @@ However, each part should theoretically stand on its own to some extent.
 Introduction
 ------------
 If you know anything about Julia_, you probably know it's an interpreted
-technical/scientific computing language that competes with the likes of
-R, Matlab, NumPy and others. You've probably also heard that it compiles
-to LLVM bytecode at runtime and can often be optimized to within a
-factor of two of C or Fortran.
+language which is gaining popularity for numeric computing that competes
+with the likes of R, Matlab, NumPy and others. You've probably also
+heard that it compiles to LLVM bytecode at runtime and can often be
+optimized to within a factor of two of C or Fortran.
 
 Given these promises, it's not surprising that it's attracted some very
 high-profile users_.
@@ -49,19 +49,19 @@ are implemented directly in Julia.
 
 While keeping the syntax fairly clean and straightforward, the Julia
 ethos is ultimately about getting things done and empowering the
-programmer. If that means performance, you can do you can optimizing
-to your heart's content. If it means downloading files with ``curl``,
-it will do that, too!
+programmer. If that means performance, you optimize to your heart's
+content. If it means downloading files with ``curl``, it will do that,
+too!
 
 This ethos fits very well with system automation. The classic
 languages in this domain are Perl and Bash. Perl has the reputation of
-being "write only," and Bash is much worse than that! [#]_ However,
-both are languages that emphasize pragmatism over purity, and that
-seems to be a win for short scripts. Julia is more readable than
-either of these, but it is not less pragmatic. [#]_
+being "write only," and Bash is much worse than that! However, both are
+languages that emphasize pragmatism over purity, and that seems to be a
+win for short scripts. Julia is more readable than either of these, but
+it is not less pragmatic. [#]_
 
 This tutorial follows roughly the approach of my `Python tutorial`_ on
-administrative scripting and will refer to it at various points.
+administrative scripting and may refer to it at various points.
 
 .. _Julia: https://julialang.org/
 .. _users: https://juliacomputing.com/case-studies/
@@ -70,13 +70,6 @@ administrative scripting and will refer to it at various points.
 .. _PCRE: https://pcre.org/
 .. _Python tutorial:
   https://github.com/ninjaaron/replacing-bash-scripting-with-python
-
-.. [#] Anyone who fully undersands the semantics of the Bash they write
-       even at the time they write it is something of a domain expert.
-       Simple, straightforward Bash is vulnerable to injection more
-       often than not. A completely correct Bash script is either
-       delegating all control flow to other processes, or it is using
-       non-obvious, ugly language features to ensure safety.
 
 .. [#] This is not to fault the creators of Perl or Bourne Shell. They
        are much older langauges, and all interpreted languages,
@@ -101,7 +94,7 @@ It's just a bad idea!
   intensive problems it's targeted at, this is nothing. On a
   constrained server or an embedded system, it's bad.
 - Julia's highly optimizing JIT compiler also takes a little time to
-  warm up. There are ways to recompile some things, but who wants to
+  warm up. There are ways to precompile some things, but who wants to
   bother for little scripts? The speed of the compiler is impressive for
   how good it actually is, but it's not instant.
 
