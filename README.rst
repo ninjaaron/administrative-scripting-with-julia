@@ -26,17 +26,18 @@ Given these promises, it's not surprising that it's attracted some very
 high-profile users_.
 
 I don't do any of that kind of programming. I like Julia for other
-reasons altogether. It just feels good to write. The language features
-scratch all my itches and the standard library has all the right
-abstractions.
+reasons altogether. For me, the appeal is that it feels good to write.
+It's like all the things I like from Python, Perl and Scheme all rolled
+into one. The abstractions, both in the language and the standard
+library, just feel like they are always hitting the right points.
 
-Semantically and syntactically, it feels similar to Python and Ruby
+Semantically and syntactically, it feels similar to Python and Ruby,
 though it promotes functional design patterns and doesn't support
-classic OO patterns in the same way. Instead, it relies on structs,
-abstract types, and multiple dispatch as tools for working with types.
-Julia favors immutability, but it's not strict. Julia's metaprogramming
-story is simple yet deep. It allows operator overloading and other kinds
-of magic methods. If that isn't enough, it has Lips-like AST macros.
+classical OO patterns in the same way. Instead, it relies on structs,
+abstract types, and multiple dispatch for its type system. Julia favors
+immutability, but it's not strict. Julia's metaprogramming story is
+simple yet deep. It allows operator overloading and other kinds of magic
+methods. If that isn't enough, it has Lips-like AST macros.
 
 Finally, reading the standard library (which is implemented mostly in
 very readable Julia), you see just how pragmatic it is. It is happy to
@@ -49,19 +50,23 @@ are implemented directly in Julia.
 
 While keeping the syntax fairly clean and straightforward, the Julia
 ethos is ultimately about getting things done and empowering the
-programmer. If that means performance, you optimize to your heart's
+programmer. If that means performance, you can optimize to your heart's
 content. If it means downloading files with ``curl``, it will do that,
 too!
 
-This ethos fits very well with system automation. The classic
-languages in this domain are Perl and Bash. Perl has the reputation of
-being "write only," and Bash is much worse than that! However, both are
+This ethos fits very well with system automation. The classic languages
+in this domain are Perl and Bash. Perl has the reputation of being
+"write only," and Bash is much worse than that! However, both are
 languages that emphasize pragmatism over purity, and that seems to be a
 win for short scripts. Julia is more readable than either of these, but
 it is not less pragmatic. [#]_
 
 This tutorial follows roughly the approach of my `Python tutorial`_ on
-administrative scripting and may refer to it at various points.
+administrative scripting and may refer to it at various points. Note
+that I've been using Linux exclusively for more than a decade and I'm
+not very knowledgable about Windows or OS X. However, if people wish to
+contribute content necessary to make this tutorial more compatible with
+those platforms, I would be very happy to learn.
 
 .. _Julia: https://julialang.org/
 .. _users: https://juliacomputing.com/case-studies/
@@ -84,24 +89,23 @@ Why You Shouldn't Use Julia for Administrative Scripts
 It's just a bad idea!
 
 - Julia is not the most portable. It's a relatively new language and has
-  only had it's 1.0 release this year (2018). Many Linux distros don't
+  only had it's 1.1 release this year (2019). Many Linux distros don't
   have a package available. Ubuntu 18.04 (the latest one as I write
   this) doesn't have a package in the repository, though it is available
-  as a snap. Even if you can compile from source, it has that LLVM
-  dependency.
-- Julia has a fat runtime. It's more than 100KB and it has a
-  human-perceptible load time on a slower system. For the kinds of
-  intensive problems it's targeted at, this is nothing. On a
-  constrained server or an embedded system, it's bad.
+  as a snap.
+- Julia has a fat runtime and it has a human-perceptible load time on a
+  slower system. For the kinds of intensive problems it's targeted at,
+  this is nothing. On a constrained server or an embedded system, it's
+  bad.
 - Julia's highly optimizing JIT compiler also takes a little time to
   warm up. There are ways to precompile some things, but who wants to
   bother for little scripts? The speed of the compiler is impressive for
   how good it actually is, but it's not instant.
 
 The above are reasonable arguments against using Julia on a certain
-class of servers. However, none of this stuff really matters on a PC
-running an OS with current packages. If your system can run a modern web
-browser, Julia's ~140K runtime is a pittance.
+class of servers. However, none of this stuff really matters on a
+PC/workstation running an OS with current packages. If your system can
+run a modern web browser, Julia's runtime is a pittance.
 
 If you already want to learn Julia, which there are many good reasons to
 do, writing small automation scripts is a gentle way to become
@@ -132,10 +136,10 @@ with the rich data structures that Julia provides. To be honest, I'm
 still in the process of learning Julia myself, and I'm relying heavily
 on the `official docs`_ for that, especially the "Manual" section. As an
 experienced Python programmer, the interfaces provided by Julia feel
-very familiar, and I suspect the feeling will be even stronger for Ruby
-programmers. For programmers with this background, becoming productive
-in Julia should only take a few hours, though there are rather major
-differences as one progresses in the language.
+very familiar, and I suspect the feeling will be similar for Ruby
+programmers. For us, becoming productive in Julia should only take a few
+hours, though there are rather major differences as one progresses in
+the language.
 
 For a quick introduction to the language, the `learning`_ page has some
 good links. The `Intro to Julia`_ with Jane Herriman goes over
