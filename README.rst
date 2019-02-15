@@ -9,10 +9,13 @@ order, after the introduction is:
 - files
 - CLI
 - filesystem
-- processes (still being written)
-- regex (not yet started)
+- processes
+- regex (still being written)
 
 However, each part should theoretically stand on its own to some extent.
+
+Those parts which have been written should nonetheless be considered
+drafts for the moment, but you may still find them useful.
 
 Introduction
 ------------
