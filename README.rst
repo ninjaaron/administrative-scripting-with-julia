@@ -17,8 +17,6 @@ However, each part should theoretically stand on its own to some extent.
 Those parts which have been written should nonetheless be considered
 drafts for the moment, but you may still find them useful.
 
-.. contents::
-
 Introduction
 ------------
 If you know anything about Julia_, you probably know it's an interpreted
