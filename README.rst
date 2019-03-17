@@ -167,7 +167,7 @@ Reading and Writing Files
 
 I like to start going over administrative scripting with the topic of
 files because files are fundamental to the way a Unix system thinks
-about data. If the filesystem were relational database, files would be
+about data. If the filesystem were a relational database, files would be
 the tables, and each line would be like a record. This is obviously not
 true of every file, but it is a pervasive pattern. To the system, files
 are not only data stored on disk. They can be anything that can do IO
@@ -197,14 +197,15 @@ Opening Files
 
 
 
-Opening files is similar to Python3. There is an ``open`` method which
-takes then name of the file as a string, and a number of mode arguments
-after, and returns an ``IO`` object. The modes you'll most often be
-using are ``"r"``, ``"w"`` and ``"a"``, for *read*, *write* and
-*append*. These correspond to ``<``, ``>`` and ``>>`` in the shell.
-``"r"`` is the default. There are more mode arguments, and you can read
-about them in the `documentation for
-``open`` <https://docs.julialang.org/en/v1/base/io-network/#Base.open>`__.
+The basics of working with files in Julia are not much different from
+other programming languages. There is an ``open`` method which takes
+then name of the file as a string and a mode argument, and returns an
+``IO`` instance. The modes you'll most often be using are ``"r"``,
+``"w"`` and ``"a"``, for *read*, *write* and *append*. These correspond
+to ``<``, ``>`` and ``>>`` in the shell. ``"r"`` is the default. There
+are more mode arguments, and you can read about them in the
+`documentation for
+open <https://docs.julialang.org/en/v1/base/io-network/#Base.open>`__.
 There is a ``write`` function for writing to files, but ``print`` and
 ``println`` work just as well, and they will convert any non-string
 arguments to a string representation before sending it to the file. The
@@ -229,14 +230,16 @@ argument, ``String`` is used. Here is the result if it is omitted:
     UInt8[0x53, 0x6f, 0x6d, 0x65, 0x20, 0x74, 0x65, 0x78, 0x74, 0x20, 0x63, 0x6f, 0x6e, 0x63, 0x65, 0x72, 0x6e, 0x69, 0x6e, 0x67, 0x20, 0x66, 0x6f, 0x6f, 0x2e, 0x0a]
 
 We've also seen the ``close`` function so far. This cleans up the file
-descriptor for the system and flushes and data remaining in buffers.
-However, you normally won't call it yourself. For one, if you want to be
-lazy, the file descriptor will be cleaned up when the IO object is
-garbage-collected, so you *can* ignore it, espeically if you're not
-opening many files. However, if you are opening a lot of files and you
-aren't sure when the garbage collector runs (like me), There are other
-ways to do it. The first one is functionally similar to a context
-manager in Python, but it looks a little different.
+descriptor for the system and flushes any data remaining in buffers.
+However, you normally won't call it yourself.
+
+For one thing, if you want to be lazy, the file descriptor will be
+cleaned up when the IO object is garbage-collected, so you *can* ignore
+it, espeically if you're not opening many files. However, if you are
+opening a lot of files and you aren't sure when the garbage collector
+runs (like me), There are other ways to do it. The first one is
+functionally similar to a context manager in Python, if you're familiar
+with that, but it looks a little different.
 
 In Python, you'd write:
 
@@ -260,11 +263,11 @@ block <https://docs.julialang.org/en/v1/manual/functions/#Do-Block-Syntax-for-Fu
     Some text concerning foo.
 
 
-Do blocks are useful because, like Python context manager, they still do
-the cleanup step even if an exception is thrown inside the block.
-However, Julia has better shortcuts than that. Many functions that would
-take a readable ``IO`` instance as their argument can take the name of
-the file directly instead.
+Do blocks with ``open`` are useful because they still do the cleanup
+step even if an exception is thrown inside the block. However, Julia has
+better shortcuts than that. Many functions that would take a readable
+``IO`` instance as their argument can take the name of the file directly
+instead.
 
 .. code:: julia
 
@@ -317,9 +320,9 @@ Iterating on Files
     The last line
 
 
-Reading a file as a chunck of text is fine, but Unix tools really need
-to be able to break files into lines and deal with them one line at a
-time. In Julia, there are a couple ways to do this. The first is using
+Reading a file as a chunck of text is fine, but Unix tools typically
+need to break files into lines and deal with them one line at a time. In
+Julia, there are a couple ways to do this. The first is using
 ``readlines`` to read the lines in the file into an array. Like
 ``read``, ``readlines`` can take an IO object or a filename as the first
 argument.
@@ -349,11 +352,10 @@ possible, just not default.
     ["The first line\n", "Another line\n", "The last line\n"]
 
 ``readline`` will be fine for most files, but it's not good if you have
-to read a large file that can't actually fit in memory. A more robust
-way to deal with lines is lazily. That's what ``eachline`` is for. It
-takes the same kind arguments as ``readlines``, but doesn't load
-everything into memory at once. You just loop over it and get your
-lines.
+to read a large file that can't fit in memory. A more robust way to deal
+with lines is lazily. That's what ``eachline`` is for. It takes the same
+kind arguments as ``readlines``, but doesn't load everything into memory
+at once. You just loop over it and get your lines.
 
 .. code:: julia
 
@@ -385,8 +387,12 @@ a do block.
 There are many more functions you can use with ``IO`` objects, but this
 covers the common case for administrative scripting. You can read the
 `documentation <https://docs.julialang.org/en/v1/base/io-network/>`__ if
-you want more info. We're moving on to `command-line
-interfaces <foo>`__.
+you want more info. We're moving on to command-line interfaces.
+
+*Note: the Julia standard library only deals with ASCII/UTF8 strings.
+You may wish to check out
+`JuliaStrings <https://github.com/JuliaStrings>`__ for support for other
+encodings.*
 
 Command-Line Interfaces
 =======================
