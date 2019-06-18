@@ -1,21 +1,25 @@
 Administrative Scripting with Julia
 ===================================
 
-Note that this tutorial is still in process. Eventually the parts that
-are only in notebooks will be moved into this file with a script, but
-for the moment, you can look at the notebooks directly. The intended
+Note that this tutorial is still in process. The intended
 order, after the introduction is:
 
-- files
-- CLI
-- filesystem
-- processes
-- regex (still being written)
+- files_
+- CLI_
+- filesystem_
+- processes_
+- regex_ (still being written)
 
 However, each part should theoretically stand on its own to some extent.
 
 Those parts which have been written should nonetheless be considered
 drafts for the moment, but you may still find them useful.
+
+.. _files: 1-files.ipynb
+.. _CLI: 2-CLI.ipynb
+.. _filesystem: 3-filesystem.ipynb
+.. _processes: 4-processes.ipynb
+.. _regex: 5-regex.ipynb
 
 Introduction
 ------------
@@ -160,3 +164,5 @@ the language
 .. _Intro to Julia: https://www.youtube.com/watch?v=8h8rQyEpiZA&t=
 .. _Jupyter Notebooks: https://github.com/JuliaComputing/JuliaBoxTutorials
 .. _Fast Track to Julia: https://juliadocs.github.io/Julia-Cheat-Sheet/
+
+Anway, let's get straight on to files_.
