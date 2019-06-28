@@ -39,12 +39,13 @@ into one. The abstractions, both in the language and the standard
 library, just feel like they are always hitting the right points.
 
 Semantically and syntactically, it feels similar to Python and Ruby,
-though it promotes functional design patterns and doesn't support
-classical OO patterns in the same way. Instead, it relies on structs,
-abstract types, and multiple dispatch for its type system. Julia favors
-immutability, but it's not strict. Julia's metaprogramming story is
-simple yet deep. It allows operator overloading and other kinds of magic
-methods. If that isn't enough, it has Lips-like AST macros.
+though it promotes some design patterns more common in functional
+languages and doesn't support classical OO patterns in the same way.
+Instead, it relies on structs, abstract types, and multiple dispatch for
+its type system. Julia's metaprogramming story is simple yet deep. It
+allows operator overloading and other kinds of magic methods for
+applying built-in syntax features to your own types. If that isn't
+enough, it has Lips-like AST macros.
 
 Finally, reading the standard library (which is implemented mostly in
 very readable Julia), you see just how pragmatic it is. It is happy to
