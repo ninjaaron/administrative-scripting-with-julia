@@ -97,10 +97,12 @@ Why You Shouldn't Use Julia for Administrative Scripts
 It's just a bad idea!
 
 - Julia is not the most portable. It's a relatively new language and has
-  only had it's 1.1 release this year (2019). Many Linux distros don't
-  have a package available. Ubuntu 18.04 (the latest one as I write
-  this) doesn't have a package in the repository, though it is available
-  as a snap.
+  only had its 1.1 release (at the time of writing, 2019, while 1.4 was
+  out in 2020). Many Linux distros don't have a package available.
+  Ubuntu 18.04 (the latest one as I write this) doesn't have a package
+  in the repository, though it is available as a snap (but download at
+  julialang.org, is preferred; as of April 2020, the snap install is
+  32-bit, and it may give you trouble, while it could do in some cases).
 - Julia has a fat runtime and it has a human-perceptible load time on a
   slower system. For the kinds of intensive problems it's targeted at,
   this is nothing. On a constrained server or an embedded system, it's
