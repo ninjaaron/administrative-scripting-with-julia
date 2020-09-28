@@ -112,9 +112,9 @@ It's just a bad idea!
   bother for little scripts? The speed of the compiler is impressive for
   how good it actually is, but it's not instant.
   
-  Note: in recent versions of Julia, there is a `--compile=min` option
+  Note: in recent versions of Julia, there is a ``--compile=min`` option
   which can be used to force Julia to do less code specialization.
-  Combining this with `-O0` will reduce JIT warmup time, though method
+  Combining this with ``-O0`` will reduce JIT warmup time, though method
   resolution will still take time in some instances.
 
 The above are reasonable arguments against using Julia on a certain
