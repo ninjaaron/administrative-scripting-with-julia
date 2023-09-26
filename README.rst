@@ -45,7 +45,7 @@ Instead, it relies on structs, abstract types, and multiple dispatch for
 its type system. Julia's metaprogramming story is simple yet deep. It
 allows operator overloading and other kinds of magic methods for
 applying built-in syntax features to your own types. If that isn't
-enough, it has Lips-like AST macros.
+enough, it has Lisp-like AST macros.
 
 Finally, reading the standard library (which is implemented mostly in
 very readable Julia), you see just how pragmatic it is. It is happy to
