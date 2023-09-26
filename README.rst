@@ -23,7 +23,7 @@ drafts for the moment, but you may still find them useful.
 
 Introduction
 ------------
-If you know anything about Julia_, you probably know it's an interpreted
+If you know anything about Julia_, you probably know it's an interactive
 language which is gaining popularity for numeric computing that competes
 with the likes of R, Matlab, NumPy and others. You've probably also
 heard that it compiles to LLVM bytecode at runtime and can often be
