@@ -26,8 +26,10 @@ Introduction
 If you know anything about Julia_, you probably know it's an interactive
 language which is gaining popularity for numeric computing that competes
 with the likes of R, Matlab, NumPy and others. You've probably also
-heard that it compiles to LLVM bytecode at runtime and can often be
-optimized to within a factor of two of C or Fortran.
+heard that it compiles to machine code at runtime* with an LLVM JIT and
+can often be optimized to within a factor of two of C or Fortran. 
+
+> *recent versions of Julia do more caching of generated machine code
 
 Given these promises, it's not surprising that it's attracted some very
 high-profile users_.
