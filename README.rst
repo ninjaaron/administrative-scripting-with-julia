@@ -26,10 +26,8 @@ Introduction
 If you know anything about Julia_, you probably know it's an interactive
 language which is gaining popularity for numeric computing that competes
 with the likes of R, Matlab, NumPy and others. You've probably also
-heard that it compiles to machine code at runtime* with an LLVM JIT and
+heard that it compiles to machine code at runtime [#]_ with an LLVM JIT and
 can often be optimized to within a factor of two of C or Fortran. 
-
-    _* recent versions of Julia do more caching of generated machine code_
 
 Given these promises, it's not surprising that it's attracted some very
 high-profile users_.
@@ -85,6 +83,8 @@ those platforms, I would be very happy to learn.
 .. _PCRE: https://pcre.org/
 .. _Python tutorial:
   https://github.com/ninjaaron/replacing-bash-scripting-with-python
+
+.. [#] recent versions of Julia do more caching of generated machine code.
 
 .. [#] This is not to fault the creators of Perl or Bourne Shell. They
        are much older langauges, and all interpreted languages,
