@@ -87,7 +87,7 @@ those platforms, I would be very happy to learn.
 .. [#] recent versions of Julia do more caching of generated machine code.
 
 .. [#] This is not to fault the creators of Perl or Bourne Shell. They
-       are much older langauges, and all interpreted languages,
+       are much older langauges, and all dynamic languages to come after,
        including Julia, have followed in their footsteps. Later
        languages learned from their problems, but they also learned from
        what they did right, which was a lot!
